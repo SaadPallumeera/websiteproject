@@ -1,0 +1,20 @@
+
+<html>
+    <body style="background-color:rgba(132, 138, 141, 0.242);background: url(https://i.imgur.com/MJAkxbh.png);background-size:10%")>
+{% block content %}
+    {% if chart %}
+    <img src="data:image/png;base64,{{chart|safe}}" style = "object-fit:contain;max-width: 80%;
+    max-height: 80vh">
+    {%endif%}
+
+{% endblock content %}
+
+<form>
+    <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+    <button type="button" class="btn btn-success" style="margin-left:1%;margin-top:.5%"
+    onclick="history.back()">Back</button>
+</body>
+</form>
