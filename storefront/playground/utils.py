@@ -181,6 +181,51 @@ class Chemistry():
             ans+= s1[d]*Chemistry.getAmu(element[d])
             d+=1
         return(ans)
+
+    def percentMass(mol):
+        mol1 = mol
+        mol = list(mol)
+        element = list()
+        quantity = list()
+        seperate = list()
+       
+        x = 0
+        a = -1
+        while (x < len(mol)):
+            if (mol[x].isupper()):
+                element.append(mol[x])
+                a+=1
+            if(mol[x].islower()):
+                element[a]+=mol[x]
+            x+=1
+        y = 0
+        z=-1
+
+        l1 = re.sub( r"([A-Z])", r" \1", mol1).split()
+        s1 = list();
+        
+        for i in l1:
+            if(i[len(i)-1:len(i)].isnumeric()):
+                temp = ([int(s) for s in re.findall(r'\d+', i)])
+                s1.append(temp[0])
+            else:
+                s1.append(1)
+        ans = 0
+        d=0
+        while (d<len(element)):
+            ans+= s1[d]*Chemistry.getAmu(element[d])
+            d+=1
+        count = 0
+        answer = ""
+        while (count<len(element)):
+            add = ""
+            add += str(element[count])
+            add += str(s1[count])
+            num = Chemistry.mm(add)
+            percent = round(num/ans * 100,4)
+            answer += "Percent mass composition of " + Chemistry.Names[Chemistry.Symbols.index(element[count])] + " is " + str(percent) + "%. \n"
+            count+=1
+        return(answer) 
     
 
 
