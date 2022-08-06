@@ -85,7 +85,7 @@ if DEBUG:
     }
 else:  DATABASES = {
         'default': {
-            'ENGINE': 'django.db.backends.postgressql_psycopg2',
+            'ENGINE': 'django.db.backends.postgresql_psycopg2',
             'NAME': 'website',
             'USER':'saad',
             'PASSWORD':'Fcbarca05!',
