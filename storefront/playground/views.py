@@ -1,10 +1,12 @@
 from hashlib import shake_128
+from multiprocessing.sharedctypes import Value
 from django.shortcuts import render
 from django.http import HttpResponse
 import requests
 import matplotlib.pyplot as plt
 from .utils import get_plot, titrationS, Chemistry
 import math
+
 
 l1 = []
 
@@ -219,9 +221,8 @@ def IRL_answer(request):
     answer = "The concentration after " + str(time) + " seconds is " + str(ans) + " molar"
     return(render(request,"IRL_ans.html",{"ans":answer}))
 
-    
-    
 
+def error_500(request):
+        data = {}
+        return render(request,'error_500.html', data)
 
-
-    
