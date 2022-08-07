@@ -4,6 +4,7 @@ from . import views
 #URLConf
 urlpatterns = [
     path('titration/',views.say_hello),
+    path('titrations/',views.say_hello,
     path("simple_function/",views.simple_function),
     path("titration/graph/",views.main_view),
     path("",views.home_view),
