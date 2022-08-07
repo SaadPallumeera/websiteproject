@@ -28,7 +28,7 @@ SECRET_KEY = 'django-insecure-^n$lmnwqw%=739dhdb!^1$18i^hhhq2k&+i)(*g%c7bawfib-2
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['159.89.239.126']
+ALLOWED_HOSTS = ['165.232.131.108','127.0.0.1','159.89.239.126']
 
 
 # Application definition
@@ -85,7 +85,7 @@ if DEBUG:
     }
 else:  DATABASES = {
         'default': {
-            'ENGINE': 'django.db.backends.postgresql_psycopg2',
+            'ENGINE': 'django.db.backends.sqlite3',
             'NAME': 'website',
             'USER':'saad',
             'PASSWORD':'Fcbarca05!',
