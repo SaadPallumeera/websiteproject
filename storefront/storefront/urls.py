@@ -16,10 +16,13 @@ Including another URLconf
 from cgitb import html
 from django.contrib import admin
 from django.urls import path, include 
+from django.conf.urls import handler404, handler500
+from playground import views
 
 urlpatterns = [
     path('admin/',admin.site.urls),
  #   path('titration/', include('playground.urls')),
     path("",include('playground.urls')),
-
 ]
+
+handler500 = views.error_500
