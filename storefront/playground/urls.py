@@ -4,9 +4,8 @@ from . import views
 #URLConf
 urlpatterns = [
     path('titration/',views.say_hello),
-    path('titrations/',views.say_hello),
     path("simple_function/",views.simple_function),
-    path("titrations/graph/",views.main_view),
+    path("titration/graph/",views.main_view),
     path("",views.home_view),
     path("molMass/",views.molMass_view),
     path("molMass/answer/",views.molMass_answer), 

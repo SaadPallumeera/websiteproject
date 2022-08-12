@@ -16,6 +16,9 @@ def button(request):
     return(render(request,'hello.html'))
 
 def say_hello(request):
+    data = requests.get("https://regres.in/api/users")
+    print(data.text)
+    data = data.text
     return render(request,'hello.html',{'data':data})
     
 def simple_function(request):
