@@ -12,24 +12,9 @@ l1 = []
 
 
 # Create your views here.
-def button(request):
-    return(render(request,'hello.html'))
 
 def say_hello(request):
-    data = requests.get("https://regres.in/api/users")
-    print(data.text)
-    data = data.text
-    return render(request,'hello.html',{'data':data})
-    
-def simple_function(request):
-    print("\nThis is a simple function\n")
-  #  return(HttpResponse("""<html><script>window.location.replace('/');<script></html>"""))
-    inp = request.GET.get('username')
-   # inp2 = request.GET.get("password")
-   # jake = "hello"
-   # inp = 'boy'
-
-    return(HttpResponse(inp))
+    return render(request,'hello.html')
 
 def main_view(request):
 
