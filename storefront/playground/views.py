@@ -16,6 +16,16 @@ l1 = []
 def say_hello(request):
     return render(request,'hello.html')
 
+def simple_function(request):
+    print("\nThis is a simple function\n")
+
+    inp = request.GET.get('username')
+   # inp2 = request.GET.get("password")
+   # jake = "hello"
+   # inp = 'boy'
+
+    return(HttpResponse(inp))
+
 def main_view(request):
 
     x = float(request.GET.get('volAcid'))
